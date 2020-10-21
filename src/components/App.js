@@ -1,16 +1,16 @@
-import React, {Component, useState} from "react";
-import '../styles/App.css';
+import React from "react";
+import "./styles.css";
 
-class App extends Component {
-    render() {
+export default function App() {
+  const cities = ["Goa", "Darjeeling", "Lonavala"];
 
-        return(
-           <>
-//write your code here
-	</>
-        )
-    }
+  return (
+    <div>
+      <ol>
+        {cities.map((city, index) => (
+          <li key={`location ${index + 1}`}>{city}</li>
+        ))}
+      </ol>
+    </div>
+  );
 }
-
-
-export default App;
